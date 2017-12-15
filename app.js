@@ -1,18 +1,17 @@
-// SERVER SIDE CODE
 require('dotenv').config();
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 3000;
 
-// var db = require('./database/helpers.js');
-// var Bookshelf = require('./bookshelf.js');
+
+// serve static files later
+
+app.get('/', function (req, res) {
+  
+});
+
+
 var config = require('./knexfile.js').development;
-// const { Client } = require('pg')
-// const client = new Client()
-
-// client.connect()
-
-// client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
-//   console.log(err ? err.stack : res.rows[0].message) // Hello World!
-//   client.end()
-// });
 
 console.log('Congif', config);
 var knex = require('knex')({ // should initialize connection to db
@@ -73,3 +72,12 @@ var myUser = new User({
 }).save().then(_ => {
   console.log('Time to take a break!');
 });
+
+
+
+var server = app.listen(port, function () {
+  var host = server.address().address
+  var port = server.address().port
+  
+  console.log("Example app listening at http://%s:%s", host, port)
+})
