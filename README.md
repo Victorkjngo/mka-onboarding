@@ -12,9 +12,9 @@ DB
 STORY: As a user, when I first get on the page, I should see a "Sign-in" button.
 ---
 CLIENT
-  [] Create redux store
-  Initialize logged_in to false
-    Initialize 10 locations to empty strings
+  [x] Create redux store
+  [x]Initialize logged_in to false
+    [x] Initialize 10 locations to empty strings
 CLIENT
   [x] Create landing page component
   [x] Landing page component has nested componet that's conditionally shows "Sign-in"/"Log-out"
@@ -24,15 +24,16 @@ CLIENT
 STORY: After clicking the sign-in button, I see a sign-up page that has three fields (name, email, password) and a save button
 ---
 CLIENT
-  [] On "Sign-in" click, client is routed to route "/sign-up/1"
+  [x] On "Sign-in" click, client is routed to route "/sign-up/1"
 CLIENT
-  [/sign-in/1] Create component that shows three input boxes (username, email, password) AND save button 
-    Save button routes user to /sign-up/2
+  [x] [/sign-in/1] Create component that shows three input boxes (username, email, password) AND save button 
+   [x] Save button routes user to /sign-up/2
+   [x] Create dispatcher
 CLIENT
-  Upon loss of focus on any field, the field values are stored onto redux state.
+  [x]Upon loss of focus on any field, the field values are stored onto redux state.
 CLIENT
   Upon click of save button, store is sent to server
-    [/sign-up/1] Click handler on button, AJAX send store to server  (with rowID)
+    [][/sign-up/1] Click handler on button, AJAX send store to server  (with rowID)
 SERVER --> DB
   Server saves all of the info in store to new row.
   Create request handler for /sign-up/:id endpoint

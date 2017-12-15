@@ -8,17 +8,12 @@ import {
   UPDATE_ADDRESS,
   UPDATE_CITY,
   UPDATE_STATE,
-  UPDATE_ZIP
+  UPDATE_ZIP,
+  LOG_IN
 } from '../Actions/actionTypes.js';
 
-import {
-  updateUserName, updatePassword, updateEmail,
-  updateFirstName, updateLastName, updateTel,
-  updateAddress, updateCity, updateState, updateZip
-} from '../actionCreators.js';
-
 const initialState = {
-  username: '',
+  username: '3',
   password: '',
   email: '',
   first_name: '',
@@ -81,6 +76,11 @@ export default function onBoardApp (state = initialState, action) {
     case UPDATE_ZIP:
       return Object.assign({}, state, {
         zip: action.text
+      });
+    
+    case LOG_IN:
+      return Object.assign({}, state, {
+        logged_in: !state.logged_in
       });
 
     default:

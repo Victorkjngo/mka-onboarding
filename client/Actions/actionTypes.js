@@ -8,8 +8,9 @@ const UPDATE_ADDRESS = "UPDATE_ADDRESS"
 const UPDATE_CITY = "UPDATE_CITY";
 const UPDATE_STATE = "UPDATE_STATE";
 const UPDATE_ZIP = "UPDATE_ZIP";
+const LOG_IN = "LOG_IN";
 
-export.default = {
+module.exports = {
   UPDATE_USERNAME,
   UPDATE_PASSWORD,
   UPDATE_EMAIL,
@@ -19,5 +20,6 @@ export.default = {
   UPDATE_ADDRESS,
   UPDATE_CITY,
   UPDATE_STATE,
-  UPDATE_ZIP
+  UPDATE_ZIP,
+  LOG_IN
 };

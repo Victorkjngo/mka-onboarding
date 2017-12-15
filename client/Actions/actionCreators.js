@@ -8,7 +8,8 @@ import {
   UPDATE_ADDRESS,
   UPDATE_CITY,
   UPDATE_STATE,
-  UPDATE_ZIP
+  UPDATE_ZIP,
+  LOG_IN
 } from './actionTypes.js';
 
 export function updateUserName (text) {
@@ -49,4 +50,8 @@ export function updateState (text) {
 
 export function updateZip (text) {
   return { type: UPDATE_ZIP, text: text };
+};
+
+export function logIn () {
+  return { type: LOG_IN };
 };
