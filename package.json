@@ -19,7 +19,10 @@
   "homepage": "https://github.com/Victorkjngo/mka-onboarding#readme",
   "dependencies": {
     "bookshelf": "^0.12.0",
+    "dotenv": "^4.0.0",
     "express": "^4.16.2",
+    "knex": "^0.13.0",
+    "pg": "^7.4.0",
     "postgresql": "0.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
